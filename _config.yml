@@ -14,11 +14,9 @@ author: Minh Nguyen
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  <i class="fa fa-graduation-cap" aria-hidden="true" fa-2x></i> Profile: "profile"
-  <i class="fas fa-seedling" aria-hidden="true" fa-2x></i> About me: "aboutme"
+  <i class="fa fa-graduation-cap" aria-hidden="true" fa-2x></i> About me: "aboutme"
  # <i class="far fa-file-alt"></i> Resume: "resume/resume.pdf"
   <i class="fa fa-question" aria-hidden="true" fa-2x></i> Contact: "contact"
-  <i class="fa fa-search" aria-hidden="true" fa-2x></i> : "search"
   <i class="fas fa-home"></i> : "https://minhngx.github.io/"
 
 # --- Logo --- #
