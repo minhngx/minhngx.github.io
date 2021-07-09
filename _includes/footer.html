@@ -19,7 +19,7 @@
 
       {% if site.url-pretty %}
         &nbsp;&bull;&nbsp;
-        <span class="author-site">
+   	    <span class="author-site">
           <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
         </span>
       {% endif %}
@@ -32,7 +32,7 @@
       {% endif%}
       </p>
       {% unless site.remove-ads %}<p class="theme-by text-muted">
-        Powered by
+        <font color='#ffffff'>Powered by</font>
         <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
       </p>{% endunless %}
       </div>
