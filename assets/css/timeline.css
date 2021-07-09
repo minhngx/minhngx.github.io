@@ -1,12 +1,14 @@
 body {	
-  margin: 0;
-  padding: 0;
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 1.125rem;
+  color: {{ site.text-col | default: "#404040" }};
+  position: relative;
+  padding-bottom:60px;
   background-color: {{ site.page-col | default: "#FFFFFF" }};
-  
-  color: rgb(50,50,50);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 100%;
-  line-height: 1.6em;
+  {% if site.page-img %}
+  background-image: url({{ site.page-img | relative_url }});
+  background-attachment: fixed;
+  {% endif %}
 }
 
 /* ================ The Timeline ================ */
