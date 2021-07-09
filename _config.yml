@@ -30,7 +30,7 @@ round-avatar: false
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-title-img: "/img/avatar/pic_avatar.jpg"
+title-img: "/assets/img/reddit_icon.png"
 
 
 # --- Footer social media links --- #
