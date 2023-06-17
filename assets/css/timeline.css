@@ -54,14 +54,14 @@ body {
 
 .direction-l {
   position: relative;
-  width: 300px;
+  width: 290px;
   float: left;
   text-align: right;
 }
 
 .direction-r {
   position: relative;
-  width: 300px;
+  width: 290px;
   float: right;
 }
 
