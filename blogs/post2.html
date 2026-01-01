@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOSAR Keynotes - Minh Nguyen</title>
+    <link rel="stylesheet" href="blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .blog-container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: #b1c8c6; text-decoration: none; padding: 0.5rem 1rem; border: 1px solid #b1c8c6; border-radius: 4px; }
+        .back-link:hover { background-color: #b1c8c6; color: white; }
+        .blog-header { text-align: center; margin-bottom: 3rem; }
+        .blog-header h1 { color: #b1c8c6; }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <a href="index.html" class="back-link">← Back to Blog</a>
+        
+        <header class="blog-header">
+            <h1>AUTOSAR Keynotes</h1>
+            <p>Automotive software architecture fundamentals</p>
+        </header>
+
+        <div id="content"></div>
+        
+        <script>
+            const markdown = `
+
+## 1. AUTOSAR in Practice  
+### 1.1. Busses  
+- Bus access methods:  
+**Master-Slave method:**  
+
+> - Master ECU controls data transmission on the bus  
+> - Slave ECUs may only respond to requests by the Master ECU  
+> - Example: **LIN** bus  
+
+**Event-driven method:**
+> - Any ECU can access the available bus at any time  
+> - Priority assignments makes it possible to control message traffic  
+> - Example: **CAN** bus, **Ethernet**  
+
+  **Time-synchronous method:**
+  > - Sending process occurs in periodic time windows
+  > - Time windows are allocated to the individual ECUs  
+  > - Example: **FlexRay**, **TTCAN**  
+
+  **Token passing method:**  
+  > - Send authorization (Token) is passed from one ECU to the next  
+  > - Sending is only possible with send authorization  
+  > - Examples: Token ring, Profibus  
+
+  #### 1.1.1. LIN bus
+  ![CAN - LIN in AUTOSAR version 4.0](./images/can_lin.png)  
+  *CAN - LIN in AUTOSAR version 4.0*  
+
+  ***a. LIN BSW Modules:***
+
+  **LIN DRV**
+  - Low level driver for LIN communication via SCI/UART of the microcontroller
+  - Initialization of SCI Hardware
+  - API for generating LIN Synch break
+
+  **LIN TRCV**
+  - Driver for external LIN Transceiver
+  - Control of wakeup/sleep
+  - Network diagnostics (short circuit, open line, ...)
+
+  **LIN IF/TP**
+  - Schedule table implementation
+  - Transmission/Reception of LIN frames
+  - Sleep/Wakeup/Error/Timeout Handling
+  - Transport Protocol for Diagnostics
+
+  **LIN SM**
+  - Schedule requests, set transceiver mode, control wakeup and sleep
+
+  **LIN NM**
+  - Manage Network Mode or Sleep Mode, Transmit NM message
+  - Provide Interface to NM
+  - Coordinator functionality
+
+  ***b. Network Description:***  
+
+  ![LIN Network Description](./images/lin_nw_desc.png)  
+  *LIN Network Description*  
+
+  - The LIN Description File (LDF) describes a LIN network using the language defined in the LIN Configuration Language Specification
+  - The LDF contains information relevant to network development and analysis:
+    > - Global information such as baudrate and versions
+    > - Information on nodes, signals and frames, sender and receiver
+    > - Schedule  
+
+  ***c. Centrally controlled message distribution system:***  
+  - LIN nodes do not have equal rights due to master-slave architecture  
+  - LIN master delegates communication (Delegated Token Principle)  
+  - Message distribution based on message addressing  
+  - 64 message addresses (identifiers)  
+
+  ![LIN Message Distribution](./images/lin_msg_distribution.png)  
+  *LIN Message Distribution*  
+
+
+
+  ### _References_
+  - [Vector E-Learning - Learning module LIN](https://elearning.vector.com/mod/page/view.php?id=309)
+  - [CSS Electronics - LIN bus explained](https://www.csselectronics.com/pages/lin-bus-protocol-intro-basics)
+
+            `;
+            
+            document.getElementById('content').innerHTML = marked.parse(markdown);
+        </script>
+    </div>
+</body>
+</html>

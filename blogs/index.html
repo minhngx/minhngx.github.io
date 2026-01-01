@@ -1,0 +1,90 @@
+---
+layout: page
+---
+
+<style>
+.blog-posts {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.post-card {
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+.post-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.post-title a {
+    color: #b1c8c6;
+    text-decoration: none;
+}
+.post-title a:hover {
+    color: #596665;
+}
+.post-description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+.post-meta {
+    color: #999;
+    font-size: 0.9rem;
+}
+</style>
+
+<div class="blog-posts">
+    <article class="post-card">
+        <h2 class="post-title">
+            <a href="post1.html">Controller Area Network (CAN)</a>
+        </h2>
+        <p class="post-description">
+            Understanding automotive communication protocols and CAN bus systems.
+        </p>
+        <div class="post-meta">
+            Technical deep-dive
+        </div>
+    </article>
+
+    <article class="post-card">
+        <h2 class="post-title">
+            <a href="post2.html">AUTOSAR Keynotes</a>
+        </h2>
+        <p class="post-description">
+            Automotive software architecture fundamentals and bus communication methods.
+        </p>
+        <div class="post-meta">
+            Architecture overview
+        </div>
+    </article>
+
+    <article class="post-card">
+        <h2 class="post-title">
+            <a href="post3.html">Cryptography Algorithms</a>
+        </h2>
+        <p class="post-description">
+            Security and encryption fundamentals including symmetric algorithms.
+        </p>
+        <div class="post-meta">
+            Security concepts
+        </div>
+    </article>
+
+    <article class="post-card">
+        <h2 class="post-title">
+            <a href="post4.html">AUTOSAR Architecture</a>
+        </h2>
+        <p class="post-description">
+            Complete automotive software system design and architecture layers.
+        </p>
+        <div class="post-meta">
+            System design
+        </div>
+    </article>
+</div>

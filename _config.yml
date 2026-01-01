@@ -17,6 +17,7 @@ navbar-links:
   <i class="fa fa-graduation-cap" aria-hidden="true" fa-2x></i> About me: "aboutme"
   <i class="fas fa-seedling" aria-hidden="true" fa-2x></i> Time line: "timeline"
   <i class="far fa-file-alt"></i> Resume: "resume/resume.pdf"
+  <i class="fas fa-blog"></i> Blog: "blogs"
   <i class="fas fa-home"></i> : "https://minhngx.github.io/"
 
 # --- Logo --- #
